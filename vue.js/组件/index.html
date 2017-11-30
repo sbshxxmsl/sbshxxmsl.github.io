@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+        .color{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--       v-if(值为布尔值)    -->
+    <div id="caa">
+        <p v-if="ok =='a'">a</p>
+        <p v-else-if="ok =='b'" v-bind:class="d">b</p>
+        <p v-else-if="ok =='c'">c</p>
+        <p v-else="ok =='d'">a/b/c</p>
+    </div>
+     
+     
+     
+<!--     v-show(值为布尔值)  -->
+   <div id="ddc">
+       <p v-show="o">a</p>
+   </div>
+
+
+<!--   组件(可以重复调用)-->
+   
+<!--   全局组件-->
+   <div id="app">
+<!--      组件中的内容对应添加到slot属性中-->
+       <sbsh>
+         
+          <sbsh1></sbsh1>
+        
+       </sbsh>
+       
+       <sbsh1></sbsh1>
+   </div>
+   
+<!--   局部组件-->
+   
+   <div id="cdd">
+       <sbsh>123456</sbsh>
+   </div>
+   
+   <div id="bcc">
+<!--       message="hello1"(给message赋值)-->
+        <my-component message="hello1"></my-component>
+        <my-component message="hello2"></my-component>
+        <div>hello3</div>
+        
+        <my-sbsh t1="1" t2="2"></my-sbsh>
+   </div>
+    
+    
+    
+    <!-- JavaScript -->
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

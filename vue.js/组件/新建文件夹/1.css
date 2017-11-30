@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul{
+	list-style: none;
+	width:23%;
+	margin:0px auto;
+	
+}
+ul::after{
+	clear:both;
+	content: "";
+	display: table;
+}
+ul li{
+	float:left;
+	padding:20px;
+	background: #dddddd;
+	margin-right: 5px;
+}
+ul li a{
+	text-decoration: none;
+}
+h1{
+	text-align: center;
+}
+p{
+	text-align: center;
+}

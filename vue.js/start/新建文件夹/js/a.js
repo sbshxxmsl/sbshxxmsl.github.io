@@ -1,0 +1,22 @@
+var app=new Vue({
+    el:"#app",
+    data:{
+        c:"nihao",
+        url:"#",
+        src:"../img/1.jpg",
+        alt:"图片一",
+        title:"图片一",
+        t:true
+    },
+    methods:{
+        dian:function(){
+            if(this.t){
+                this.src="../img/2.jpg"
+            }else{
+                this.src="../img/1.jpg"
+            }
+            this.t=!this.t
+            this.sle="color:red;background-color:#aaa;outline-style:none"
+        }
+    }
+})

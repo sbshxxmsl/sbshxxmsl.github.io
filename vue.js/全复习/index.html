@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css"> </head>
+
+<body>
+    <div id="app">
+      <input type="text" v-model="message" autofocus="autofocus" placeholder="水果名称">
+       <input type="text" v-model="messages" @keyup.enter="tianjia" placeholder="个数">
+       <button v-on:click="tianjia">添加</button>
+        <ol>
+<!--           v-for事件-->
+<!--            <li v-for="list in lists">{{list.name}}</li>-->
+           <my-li v-for="(list,index) in lists" :text=list.name :ge=list.shu :key="lists.id">
+<!--           {{list.id}}-->
+           <span @click="shanchu(list.id)">删除</span></my-li>
+            
+        </ol>
+        
+    </div>
+
+<!--复习
+   <div id="app">
+    <input type="text" v-model="message" autofocus="autofocus">
+    <button @click="logmessage">按钮</button>
+      <p :title="tit" v-if="welcome">
+       {{message}}
+       </p>
+   </div>
+-->
+
+
+
+
+<!--   vue.js路由-->
+   
+   
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+<!--        v-bind可简写为"："-->
+<!--       v-on可简写为"@"-->
+        <button @click="e" :style="c">{{text}}</button>
+        <img v-bind:src="d" v-bind:alt="h" v-bind:title="tit">
+        <br>
+        
+        
+<!--        v-model双向绑定（改变一个值另一个随之改变）-->
+        <input type="text" v-model="text">  
+        
+    </div>
+    
+    
+<!--    v-for循环（根据要更改内容的数量，来确定循环的次数）-->
+    
+    <div id="cdd">
+        <ul>
+            <li v-for="(color,index) in colors">
+                <a v-bind:href="color.url">{{color.name}}{{index}}</a>
+            </li>
+        </ul>
+    </div>
+    
+    
+<!--    传递参数-->
+   
+   <div id="bbc">
+       <button v-on:click="e(456)">按钮</button>
+       <ul>
+           <li v-for="(c,index) in cs" v-on:click="e(index)">{{c.name}}</li>
+       </ul>
+   </div>
+    
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

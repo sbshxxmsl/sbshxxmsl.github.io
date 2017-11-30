@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#app{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header::after{
+   clear: both;
+    display: table;
+    content: ""; 
+}
+header{
+    margin-bottom: 20px;
+}
+header input{
+    width: 70%;
+    display: block;
+    float: left;
+    height: 30px;
+}
+header button{
+     width: 30%;
+    display: block;
+    float: left;
+    cursor: pointer;
+    height: 30px;
+}
+ul li::after{
+    clear: both;
+    display: table;
+    content: "";
+}
+ul li{
+    margin-bottom: 10px;
+    list-style: none;
+}
+ul li span{
+    width: 80%;
+    display: block;
+    float: left;
+}
+ul li button{
+    width: 20%;
+    display: block;
+    float: left;
+}

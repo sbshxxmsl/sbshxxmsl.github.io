@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="app">
+        <ul class="container ul1" >
+            <my-li v-for="life in lifes" :key = 'life.id' v-bind:tit="life.tit" v-bind:p1="life.p1" v-bind:p2="life.p2"></my-li>
+        </ul>
+        <ul class="ul2 container">
+            <my-mai v-for="mai in mais"
+               :b="mai.b"
+               :bb="mai.bb"
+               :bb2="mai.bb2"
+               :bb3="mai.bb3"
+               :bb4="mai.bb4"
+               :bb5="mai.bb5">
+                
+            </my-mai>
+        </ul>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

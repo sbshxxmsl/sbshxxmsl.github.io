@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mian.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+<!--       //html不区分大小写-->
+<!--       v-bind="tshirt"绑多个数据-->
+        <tb-shop tit="与生活不期而遇" imgsrc="img/4.jpg" e="@" c="换一换">
+            <tb-shop-list v-for="tshirt in tshirts"
+                :key="tshirt.id"
+               v-bind="tshirt"
+            ></tb-shop-list>
+        </tb-shop>
+        
+        <section class="zhong"></section>
+        
+        <tb-shop tit="献给聪明可爱的你" imgsrc="img/6.jpg" c="更多">
+            <tb-shop-list v-for="shopping in shoppings"
+                :key="shopping.id"
+               v-bind="shopping"
+            ></tb-shop-list>
+        </tb-shop>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

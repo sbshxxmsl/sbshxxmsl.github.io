@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .h{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+  <div id="app">
+      {{message}}
+  </div>
+<!--  绑定事件-->
+  <div id="app1">
+<!--    属性绑定v-bind -->
+      <p v-bind:title="title">title</p>
+<!--      事件绑定v-on-->
+      <button v-on:click="btn">按钮</button>
+  </div>
+  
+<!--  利用v-on点击切换图片-->
+  <div id="app2">
+      <button @click="qie">点击切换图片</button>
+      <img :src="src" alt="" width="300" height="150">
+  </div>
+  
+<!--  v-for循环输出水果-->
+     <div id="app3">
+         <ul>
+             <li v-for="list in lists">
+             {{list}}
+             </li>
+             <li v-for="list in listss">
+                 {{list.shuiguo}}
+             </li>
+         </ul>
+     </div>
+<!--     传递参数-->
+     <div id="app4">
+         <button @click="e('hello ')">
+             按钮
+         </button>
+     </div>
+<!--     获取数组索引-->
+     <div id="app5">
+         <p v-for="(list,index) in lists">
+             {{list}}
+             索引：{{index}}
+             <a href="#" @click="e(index)">删除</a>
+         </p>
+     </div>
+<!--     v-model双向绑定-->
+<!--    改变input中的value值使p中的innerHTML随之改变-->
+     <div id="app6">
+         <input type="text" v-model="message">
+         <p>{{message}}</p>
+     </div>
+     
+<!--     v-if判断（如果为true使p显示要不就隐藏）-->
+     <div id="app7">
+         <p v-if="t">666</p>
+     </div>
+     
+<!--     class绑定（样式绑定）-->
+     <div id="app8">
+         <h2 :class="classObject">hello</h2>
+     </div>
+      
+   <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

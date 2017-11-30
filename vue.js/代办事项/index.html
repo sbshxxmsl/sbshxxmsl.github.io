@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css"> </head>
+
+<body>
+   <div id="app">
+    <h1>todolist</h1>
+    <header>
+<!--    @keyup键盘事件-->
+<!--   autofocus立即获得焦点-->
+    <input type="text" v-model="newlist" @keyup.enter="addlist" :autofocus="autofocus" :placeholder="placeholder">
+    <button @click="addlist">添加</button>
+    </header>
+    <ul>
+        <li v-for="(list,index) in lists">
+            <span>{{list}}</span>
+<!--            把下标传入dellist函数中-->
+            <button @click="dellist(index)">删除</button>
+        </li>
+    </ul>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

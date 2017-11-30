@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+    <div id="app">
+        {{message}}
+        <br>
+        
+<!--        v-bind绑定属性更改值(在括号中更改href和src的值)-->
+        
+        <a v-bind:href="url" v-bind:title="title">{{text}}</a>
+        <br>
+        <img v-bind:src="img" v-bind:alt="alt" v-bind:title="pic">    
+    </div>
+    
+    <div id="add">
+<!--       v-on绑定事件-->
+        <button v-on:click="dian">按钮</button>
+    </div>
+    
+    
+    <div id="cdd">
+        <button v-on:click="dian" v-bind:style="sty">按钮</button>
+        <img v-bind:src="img" v-bind:alt="alt">
+    </div>
+   
+    <!-- JavaScript -->
+    <script src="js/vue.js"></script>
+    <script src="js/script.js"></script>
+    
+    
+    
+    
+</body>
+
+</html>
