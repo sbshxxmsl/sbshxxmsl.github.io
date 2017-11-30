@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //条件语句
+//               if(true){  //表达式  方法
+//                   console.log("执行代码");
+//               } 
+//                
+//                
+//                function s(){
+//                    return false;  //返回
+//                }
+//                if(s()==false){
+//                    console.log ("zhixing");
+//                }
+                
+        //         var num1 = "aa" ;
+        //        var num2 =500;
+        //        
+        //        if(num1<num2){   //判断
+        //            console.log("num1小于num2");
+        //        }else if(num1>num2){
+        //            console.log("num1大于num2");
+        //            
+        //        }else if (num1 == num2){
+        //            console.log("num1等于num2");
+        //        }else{
+        //            console.log("没有结果");
+        //        }
+        //        if (num1>num2){
+        //            console.log("判断成功");
+        ////             console.log("num1是小于num2");
+        ////            alert("num1小于num2"); //提示框
+        //        }else{
+        //            console.log("判断失败");
+        //        }
+        //通过控制运算符来实现数学运算
+        //        var num1 = 10;
+        //        var num2 = 20;
+        //        var sing = "+";
+        //        var result = 0; //结果
+        //        var dd = 0;
+        //        var num = 0;
+        //        result = num1　+ num2;
+        //        console.log(result);
+        //        
+        //        result = num1　- num2;
+        //        console.log(result);
+        //        if (sing == "+") {
+        //            result = num1　 + num2;  //答案
+        //            console.log(result);
+        //        }
+        //        else if (sing == "-") {
+        //            result = num1　 - num2;
+        //            console.log(result);
+        //        }
+        //        else if (sing == "*") {
+        //            result = num1　 * num2;
+        //            console.log(result);
+        //        }
+        //        else if (sing == "/") {
+        //            result = num1　 / num2;
+        //            console.log(result);
+        //        }
+        //        else {
+        //            console.log("出错");
+        //        }
+        //        var num1 = 10, num2 = 20, sing = "+", result;
+        //        switch (sing) {
+        //        case "+":
+        //            result = num1 + num2;
+        //            break;
+        //        case "-":
+        //            result = num1 - num2;
+        //            break;
+        //        case "*":
+        //            result = num1 * num2;
+        //            break;
+        //        case "/":
+        //            result = num1 / num2;
+        //            break;
+        //              default:
+        //            console.log("其他值");
+        //            break;
+        //        }
+        //        console.log(result);
+        //        
+        //        
+        //        switch (1) {
+        //        case 0:
+        //            console.log("num的值是0");
+        //            break;
+        //        case 1:
+        //            console.log("num的值是1");
+        //            break;
+        //        case 2:
+        //            console.log("num的值是2");
+        //            break;
+        //        default:
+        //            console.log("其他值");
+        //            break;
+        //        }
+        //【条件运算符】 
+        // console.log("表达式？第一个值：第二个值");//正确返回第一个 不正确返回第二个
+        //        
+//                var num1 = 10;
+//                var num2 = 20;
+//                
+//                var result=num1>num2? 100:200; //三元运算符
+//                console.log(result);
+        //循环语句
+        //         console.log("循环语句");
+        ////        for循环
+        //        for(var i = 0;i < 10;i++){
+        //i的初始值是0
+        //判断i是否小于10，如果小于10则执行花括号里面的代码
+        //每次执行完花括号里面的代码，i的值加1
+        //            console.log(i);
+        //        }
+        //计算10以内所有正整数的加和
+        //        var num = 0;
+        //        for(var i = 1;i <= 10;i++){
+        //        num = num + i;
+        ////            num += i;
+        ////            0 = 0 + 1;
+        ////            1 = 1 + 2;
+        ////            3 = 3 + 3;
+        ////            6 = 6 + 4;
+        ////          10 = 10 + 5;
+        //             console.log(num);
+        //            
+        //            
+        //        } 
+        //        console.log(num);
+        //        
+        //        跳出语句 - 停止循环
+        //        for(var i = 1;i <= 10;i++){
+        //            if(i === 6){
+        //                break;  //停止
+        //            }
+        //            console.log(i);
+        //        }
+        ////        跳过语句 - 跳过
+        //        
+        //        for(var i = 1;i <= 10;i++){
+        //            if(i === 6){
+        //                continue; //跳过
+        //            }
+        //            console.log(i);
+        //        }
+        //        while循环
+        //        var n = 0;
+        //        var num1 = 0;
+        //    while(n <=10){
+        //        console.log(n);
+        //       
+        //        num1 = num1 + n;
+        //         n++;
+        //    }
+        //        console.log(num1);
+        //        
+        //函数 - 创建一个方法
+        //        function fun(){ //定义函数，函数名为fun
+        //            //函数体
+        //        }
+        //        fun(); //调用函数
+        //         function func(){ 
+        //          console.log("输出内容")
+        //        }
+        //        func(); 
+        //        func(); 
+        //传递参数
+//        function sum() {
+//            var num1 = 10;
+//            var num2 = 20;
+//            var result = num1 + num2;
+//            console.log(result);
+//        }
+//        sum();
+//
+//        function fun(str) {
+//            console.log("Hello" + str);
+//        }
+//        fun(" world");
+//
+//        function func(e) {
+//            console.log("Hello" + e);
+//        }
+//        func("Hello");
+//        func("World");
+//        func("function");
+//
+//        function sum1() {
+//            console.log(10 + 20);
+//        }
+//        sum1();
+//
+//        function sum2() {
+//            console.log(30 + 40);
+//        }
+//        sum2();
+//
+//        function sum3(num1, num2, num3) {
+//            alert(num3);
+//            console.log(num1 + num2 + num3);
+//        }
+//        sum3(100, 50, 300);
+//
+//        function sum4(num1, num2) {
+//            console.log(num1 * num2 + num1 + num2);
+//        }
+//        sum4(10, 20);
+//        
+//        
+
+//        function sum5(x) {
+//            var num = 0;
+//            for (var i = 1; i <= x; i++) {
+//                num = num + i;
+//               
+//        }
+//             console.log(num);
+//        }
+//        sum5(5);
+//        sum5(10);
+//        sum5(20);
+//        sum5(100);
+//        
+//        //函数返回值
+//        function fun(){
+//            return"Hello";
+//        }
+////        fun();
+//        console.log(fun());
+//        alert(fun());
+        
+        
+        //对象
+//        一个{}就是一个对象
+//        var obj={};
+        
+        
+//        var cat={
+//            name:"黎亮",
+//            age:"2",
+//            say:function(){
+//                console.log("我是"+this.name)
+//            },
+//            count:function(num1,num2){
+//                console.log(num1+num2)
+//            }
+//        }
+//        cat.count(10,20)
+//        cat.say();//我是黎亮
+//        
+////        this关键字
+//        cat.name="小亮亮";
+//        
+//        cat.say();//我是小亮亮
+        
+//        对象两种调用属性
+//        cat.name
+//        cat["name"]
+        
+        
+//        console.log(cat.name);
+////        console.log(cat["name"])
+//        
+//        console.log(cat.age);
+//        
+//        
+//        var ran={
+//            a:"  身高：140cm",
+//            b:"体重：80kg ",
+//            c:"智商：30 ",
+//            d:"性别：人妖",
+//            name:"张黎亮"
+//        }
+//        
+
+//        var ran={}
+//        ran.a="  身高：140cm"
+//        document.write(ran.name+ran.a+ran.b+ran.c+ran.d)
+        
+        
+        //数组
+//        一个[]就是一个数组
+//        var list=[1,2,3,4,5];
+//        console.log(list[4])                    
+//        console.log(list)
+//        console.log(list.length)
+//        
+//        
+//        var friends=["xiaoliang","shabi","hu"];
+//        数组常用方法
+//        追加
+//        friends.push("bi");
+        
+        
+        
+        
+//        console.log(friends[0]); 
+//        console.log(friends[1]); 
+//        console.log(friends[2]);
+//        console.log(friends)
+//        console.log(friends.length)
+//        
+//        for(var i=0;i<friends.length;i++){
+//            console.log(friends[i])
+//        }
+        
+//        for/in 语句循环遍历对象的属性：
+//        for(var i in friends){
+//            console.log(friends[i])
+//        }
+        
+//        var arr=[];
+//        for(var i=1;i<11;i++){
+//            arr.push(i);
+//            if(i<arr.length+1){
+//                console.log(i);
+//            }
+//        }
+//        console.log(arr);
+//        for(var i in arr){
+//            console.log(arr[i]);
+//        }
+        
+//        join()将数组的所有元素组成一个字符串
+//        var s=arr.join("+");
+//        console.log(s);
+        
+        
+        
+        
+        
+        
+    </script>
+    
+    <h1>DOM</h1> 
+    
+    
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    
+    
+    <button id="aa">按钮</button>
+    
+    <script>
+        
+        var h1=document.querySelector("h1");
+//        querySelector选择器只能选中一个
+        h1.style.color="red";
+//        DOM对象的style属性设置元素内联样式
+        
+        
+        var ali=document.querySelectorAll("li");
+//        querySelectorAll选择器把所有元素变为数组
+        
+        for(var i=0;i<ali.length;i++){
+            ali[i].style.color="red";
+        }
+        
+        
+//        绑定事件
+//        点击 / 滚动条 / 移入 / 移出 / 页面加载完毕
+        
+        var btn=document.querySelector("button");
+       
+        btn.onclick=function(){
+            btn.style.color="red";
+            btn.innerHTML="hello"
+            btn.id="cc";
+        }
+        
+        
+    </script>   
+    
+<!--
+    DOM操做
+    创建节点，删除节点，添加节点    
+-->
+<!--
+    <div id="parent">
+    <p>你好!</p>
+    <button id="btn1">添加节点</button>
+    </div>
+    <script>
+        var p1=document.createElement("h2");
+        var p2=document.createTextNode("这是新段落。");
+//        createTextNode方法可以创建一个文本节点
+        p1.appendChild(p2);
+//        appendChild方法可以将textNode节点添加到p1中
+        var div1=document.getElementById("parent");
+        
+        var p3=document.getElementsByTagName("p")[0];
+//        p0.removeChild(p3);
+        
+        
+        var btn=document.getElementById("btn1");
+        var zhang=document.createTextNode("张黎亮");
+        btn.onclick=function(){
+            p3.appendChild(zhang);
+            div1.appendChild(p1)
+        }
+        
+    </script>
+-->
+<!--
+    <div id="id">
+        
+    </div>
+    <script>
+        var id=document.querySelector("#id");
+        var h1=document.createElement("h1");
+        h1.className="domh1";
+        h1.innerHTML="张黎亮";
+        id.appendChild(h1);
+        var domh2=document.getElementsByClassName('domh1')[0];
+        console.log(domh2);
+        domh2.style.color="red"; 
+//        id.removeChild(h1);
+    </script>
+-->
+   <input type="text" id="ipt">
+    <button id="btn3">添加节点</button>
+    <ul id="ul1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        var ipt=document.getElementById("ipt");
+        var btn3=document.getElementById("btn3");
+        var ull=document.getElementById("ul1");
+        var li2=document.querySelectorAll("#ul1 li")
+        for(var i=0;i<3,i++){
+            var span2=document.createElement("span");
+            span2.innerHTML="删除"
+            li2[i].appendChild(span2);
+        }
+        
+        btn3.onclick=function(){
+            var li=document.createElement('li');
+            li.innerHTML=ipt.value;
+            ull.appendChild(li)
+            var span=document.createElement("span");
+            span.innerHTML="删除"
+            li.appendChild(span);
+            span.onclick=function(){
+                ull.removeChild(li);
+            }
+        }
+    </script>
+</body>
+
+</html>

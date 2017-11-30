@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+//.container{
+//    height: 100vh;
+//    width: 130px;
+//    margin-left: auto;
+//    margin-right: auto;
+//}
+
+body{
+    background-color: #000;
+}
+
+#nav{
+    width: 130px;
+    height: 400px;
+    position: absolute;
+    list-style: none;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    li{
+        position: absolute;
+        transition: 1s;
+//        沿着这个点旋转，距离上面375px，距离左边25px
+        transform-origin: 25px 375px;
+    }
+}

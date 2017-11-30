@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+     <div>
+         <span>小米6</span>
+         <sapn>单价：<span  class="danjia6">2499</span></sapn>
+         <button class="btn6">-</button>
+         <input type="text" value="1" class="shuliang6">
+         <button class="btn6">+</button>
+         <span class="zongjia6">2499</span>
+     </div>
+     <div>
+         <span>小米6 plus</span>
+         <sapn>单价：<span  class="danjia6p">2499</span></sapn>
+         <button class="btn6p">-</button>
+         <input type="text" value="1" class="shuliang6p">
+         <button class="btn6p">+</button>
+         <span class="zongjia6p">2499</span>
+     </div>
+     <div>
+         总价：<span class="qzongjia">4998</span>
+     </div>
+    <script> 
+        
+        var qzongjia=document.querySelector(".qzongjia")
+        
+        var btn6=document.querySelectorAll(".btn6");
+        var danjia6=document.querySelector(".danjia6");
+        var shuliang6=document.querySelector(".shuliang6");
+        var zongjia6=document.querySelector(".zongjia6")
+        for(var i=0;i<btn6.length;i++){
+            btn6[i].onclick=function(){
+                if(this.innerHTML=="+"){
+                    console.log(1);
+                shuliang6.value=Number(shuliang6.value)+1;  
+                }else if(shuliang6.value>1){
+                    shuliang6.value=Number(shuliang6.value)-1;
+                }else{
+                    shuliang6.value="1"
+                }
+                var danjia=Number(danjia6.innerHTML)
+                zongjia6.innerHTML=danjia*Number(shuliang6.value);
+                qzongjia.innerHTML=Number(zongjia6p.innerHTML)+Number(zongjia6.innerHTML)
+            }
+        }
+        shuliang6.onblur=function(){
+            var shu=Number(shuliang6.value);
+            if(shu>=1){
+                var danjia=Number(danjia6.innerHTML)
+                zongjia6.innerHTML=danjia*shu;
+                qzongjia.innerHTML=Number(zongjia6p.innerHTML)+Number(zongjia6.innerHTML)
+                
+                
+            }else{
+                shuliang6.value="1"
+            }
+        }
+        
+        
+        var btn6p=document.querySelectorAll(".btn6p");
+        var danjia6p=document.querySelector(".danjia6p");
+        var shuliang6p=document.querySelector(".shuliang6p");
+        var zongjia6p=document.querySelector(".zongjia6p")
+        for(var i=0;i<btn6p.length;i++){
+            btn6p[i].onclick=function(){
+                if(this.innerHTML=="+"){
+                    console.log(1);
+                shuliang6p.value=Number(shuliang6p.value)+1;  
+                }else if(shuliang6p.value>1){
+                    shuliang6p.value=Number(shuliang6p.value)-1;
+                }else{
+                    shuliang6p.value="1"
+                }
+                var danjia=Number(danjia6p.innerHTML)
+                zongjia6p.innerHTML=danjia*Number(shuliang6p.value); 
+                qzongjia.innerHTML=Number(zongjia6p.innerHTML)+Number(zongjia6.innerHTML)
+            }
+        }
+        
+        shuliang6p.onblur=function(){
+            var shu=Number(shuliang6p.value);
+            if(shu>=1){
+                var danjia=Number(danjia6p.innerHTML)
+                zongjia6p.innerHTML=danjia*Number(shuliang6p.value); 
+                qzongjia.innerHTML=Number(zongjia6p.innerHTML)+Number(zongjia6.innerHTML)
+                
+                
+            }else{
+                shuliang6p.value="1"
+            }
+        }
+        
+    </script>
+     
+</body>
+</html>

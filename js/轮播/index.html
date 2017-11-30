@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 520px;
+            height: 280px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .box{
+            transition: 1s;
+            position: absolute;
+            left: 0px;
+        }
+        .box img{
+            float: left;
+            width: 520px;
+        }
+        .left{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 10px;
+            
+        }
+        .right{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="img/1.jpg" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+            <img src="img/5.jpg" alt="">
+        </div>
+    </div>
+<!--
+    <div class="container">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+-->
+    <div class="container box2">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+    </div>
+    
+    <script>
+        window.onload=function(){
+            
+            var box=document.querySelector(".box");
+            box.innerHTML=box.innerHTML+box.innerHTML;
+            var img=document.querySelectorAll(".box img")
+            box.style.width=img[0].offsetWidth*img.length+"px"
+            
+            var i=-img[0].naturalWidth;
+            function time(){
+                if(box.offsetLeft==-box.offsetWidth/2){
+                    box.style.transition="0s";
+                    box.style.left="0px";
+                    setTimeout(time2,1)
+                }else{
+                    box.style.transition="1s";
+                    box.style.left=box.offsetLeft+i+"px"
+                    
+                }
+            }
+            var e=setInterval(time,2000)
+            function time1(){
+                 box.style.transition="1s";
+                box.style.left=(-box.offsetWidth/2+(-i))+"px";
+            }
+            function time2(){
+                box.style.transition="1s";
+                box.style.left=i+"px"
+            }
+            
+            var btn=document.querySelectorAll(".box2 button");
+            for(var q=0;q<btn.length;q++){
+                btn[q].index=q
+                
+                btn[q].onclick=function(){
+                    
+                    if(box.offsetLeft==-box.offsetWidth/2){
+                        box.style.transition="0s";
+                        box.style.left="0px";
+                    }
+                    
+                    var h=img[this.index].offsetLeft;
+                    box.style.transition="1s";
+                    box.style.left=-h+"px";
+                    
+                    clearInterval(e)
+                    e=setInterval(time,2000)
+                }
+            }
+            
+            
+//            var left=document.querySelector('.left');
+//            var right=document.querySelector(".right");
+//            console.log(left)
+//            left.onclick=function(){
+//                clearInterval(e)
+//                e=setInterval(time,2000)
+//                console.log(box.offsetLeft)
+//                if(box.offsetLeft==0){
+//                    box.style.transition="0s";
+//                    box.style.left=(-box.offsetWidth/2)+"px";
+//                    setTimeout(time1,1)
+//                    
+//                }else{
+//                    box.style.transition="1s";
+//                    box.style.left=box.offsetLeft+(-i)+"px"
+//                }
+//            }
+//            
+//            
+//            right.onclick=function(){
+//                clearInterval(e)
+//                e=setInterval(time,2000)
+//               if(box.offsetLeft==-box.offsetWidth/2){
+//                   box.style.transition="0s";
+//                   box.style.left="0px";
+//                   setTimeout(time2,1)
+//               }else{
+//                    box.style.transition="1s";
+//                   box.style.left=box.offsetLeft+i+"px"
+//               }
+//            }
+           
+        }
+        
+    </script>
+    
+</body>
+</html>

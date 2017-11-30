@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        table{
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border:1px solid #000;
+            margin-top: 100px;
+        }
+        .box{
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+/*
+        .boxbutton{
+            margin-right: 10px;
+        }
+*/
+        button{
+            padding: 4px;
+        }
+        tr{
+            border:1px solid #000;
+        }
+        td{
+             border:1px solid #000;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div class="box2">
+    <table id='table1'>
+        <tbody>
+            <tr>
+                <td class="banname">马石磊</td>
+                <td class="shanchu">删除</td>
+            </tr>
+            <tr>
+                <td class="banname">杩海杉</td>
+                <td class="shanchu">删除</td>
+            </tr>
+            <tr>
+                <td class="banname">范康宁</td>
+                <td class="shanchu">删除</td>
+            </tr>
+            <tr>
+                <td class="banname">马石磊</td>
+                <td class="shanchu">删除</td>
+            </tr>
+            <tr>
+                <td class="banname">杩海杉</td>
+                <td class="shanchu">删除</td>
+            </tr>
+            <tr>
+                <td class="banname">范康宁</td>
+                <td class="shanchu">删除</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div class="box">
+        <button id="btn">点名</button>
+        <button id='btn2'>重置</button>
+    </div>
+    <script>
+        var banName=document.querySelectorAll(".banname");
+        var btn=document.querySelector("#btn");
+        var btn2=document.querySelector("#btn2");
+        var shanChu=document.querySelectorAll(".shanchu");
+        console.log(shanChu)
+        
+        var tbody=document.querySelector("tbody")
+       
+        //利用数组下标选择。
+        var s=[];
+        var n=0;
+        var c;
+        function tu(){
+            c=Math.floor(Math.random()*banName.length)
+            for(var i=0;i<s.length;i++){
+                if(s[i]==c){
+                    tu()
+                }
+            }
+            if(c<banName.length){
+                return c
+            }
+        }
+        
+        btn.onclick=function(){
+            if(s.length!=banName.length){
+                tu()
+                s[n]=c
+                n++
+                console.log(s);
+            }
+            banName[c].style.color="red";
+            
+        }
+        btn.onmousedown=function(){
+            btn.style.backgroundColor="red"
+        }
+        btn.onmouseup=function(){
+            btn.style.backgroundColor="#fff"
+        }
+        btn2.onclick=function(){
+            s=[];
+            n=0;
+            for(var i=0;i<banName.length;i++){
+                banName[i].style.color="#000"
+            }
+        }
+        
+        //通过子集找到父级，删除父级
+        
+            for(var i=0;i<shanChu.length;i++){
+                shanChu[i].onclick=function(){
+                    tbody.removeChild(this.parentNode)
+                    banName=document.querySelectorAll(".banname")
+                }
+            }
+        
+        
+        
+    </script>
+</body>
+</html>

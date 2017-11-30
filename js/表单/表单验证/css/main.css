@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*! 盛邦升华 */
+#btn {
+  cursor: pointer;
+  width: 100px;
+  height: 50px; }
+
+#btn[disabled] {
+  cursor: no-drop; }

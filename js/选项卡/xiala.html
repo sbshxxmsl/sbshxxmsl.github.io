@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .oo{
+            background-color: #ccc;
+            width: 100px;
+        }
+        li{
+            list-style: none;
+            line-height: 100px;
+            text-align: center;
+            background-color: #ddd;
+            width: 100px;
+            transition: 0.5s;
+            height: 0px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="oo">166</div>
+        <ul class="ul">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+    <script>
+        var oo=document.querySelector(".oo");
+        var ul=document.querySelector(".ul");
+        var li=document.querySelectorAll(".ul li")
+        oo.onmouseover=function(){
+            for(var i=0;i<li.length;i++){
+                
+                li[i].style.height="100px";
+                li[i].innerHTML=i;
+                li[i].style.borderBottom="1px solid #ccc"
+            }
+        }
+        oo.onmouseout=function(){
+             for(var i=0;i<li.length;i++){
+                li[i].style.height="0px";
+                li[i].innerHTML="";
+                li[i].style.borderBottom="0px solid #ccc"
+            }
+        }
+        
+    </script>
+</body>
+</html>

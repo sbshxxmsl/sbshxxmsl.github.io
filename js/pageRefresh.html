@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-family: cursive;
+            font-size:62px;
+            text-shadow:0 0 20px #fff; 
+        }
+    </style>
+</head>
+<body>
+    <h1 id="say">立意高远，精益求精</h1>
+    
+    <script>
+        var arr=["立意高远，精益求精",
+                 "当你没有借口的那一刻，就是你成功的开始",
+                 "学好硬本领，赢在软实力！",
+                 "当你不计较自己的得失时，你才会有真正的收获",
+                 "喜欢是索取，爱是奉献",
+                 "当树离开光的那一刻，就是我们分散之时",
+                 "你主动，我们才会有故事",
+                 "失败是成功之母",
+                 "女人如水，男人如山",
+                 "你走你的路，我也走你的路"];
+        
+        var say=document.querySelector("#say");
+//        var xRan=Math.floor(Math.random()*10);
+//        say.innerHTML=arr[xRan]
+        
+        
+        function c(){
+            var xRan=Math.floor(Math.random()*10);
+            say.innerHTML=arr[xRan]
+        }
+        
+        
+        setInterval(c,3000)
+        
+            
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+@charset "UTF-8";/*! 盛邦升华 */#nav,#nav li{position:absolute}*{margin:0;padding:0;box-sizing:border-box}body{background-color:#000}#nav{width:130px;height:400px;list-style:none;left:0;right:0;top:0;bottom:0;margin:auto}#nav li{transition:1s;transform-origin:25px 375px}

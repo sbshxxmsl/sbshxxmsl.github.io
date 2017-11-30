@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>二级联动列表</title>
+<meta charset="utf-8" />
+<style>
+	.hide{ display: none; }
+</style>
+
+
+</head>
+<body>
+	<select name="provs" id="box" onchange="selcts(this)">
+		<option>—请选择—</option><!--0-->
+		<option>北京市</option><!--1-->
+		<option>天津市</option>
+		<option>河北省</option>
+	</select>
+	
+	<select name="cities" class="hide">
+	</select>
+
+  <script>
+	/*实现“省”和“市”的级联下拉列表*/
+	var cities=[[],		/*0号下标没有元素*/
+        [{"name":'东城区',"value":101},
+         {"name":'西城区',"value":102},
+         {"name":'海淀区',"value":103},
+         {"name":'朝阳区',"value":104}],
+        [{"name":'河东区',"value":201},
+         {"name":'河西区',"value":202},
+         {"name":'南开区',"value":303}],
+        [{"name":'石家庄市',"value":301},
+         {"name":'廊坊市',"value":302},
+         {"name":'保定市',"value":303},
+         {"name":'唐山市',"value":304},
+         {"name":'秦皇岛市',"value":304}]
+			];
+      
+      //文档片断（不会增加任何元素）
+    
+    
+      //onchange事件
+      //selectedIndex  选中项的下标
+      
+      function selcts(selprovs){
+//          获取选中项的下标
+          var i=selprovs.selectedIndex;
+          
+          var cts=cities[i];
+          var s=document.querySelector("[name='cities']");
+          if(cts.length>0){
+                s.className="";
+                s.innerHTML="";
+                var frag=document.createDocumentFragment();
+                var opt=document.createElement("option");
+                opt.innerHTML="—请选择—";
+                frag.appendChild(opt)
+                for(var i=0;i<cts.length;i++){
+                    var opt=document.createElement("option");
+                    opt.innerHTML=cts[i].name;
+                    
+                    opt.val=cts[i].value;
+//                    本页效果，这行代码可加可不加
+                    
+                    frag.appendChild(opt);
+                }
+                s.appendChild(frag)
+          }else{
+              s.className="hide";
+          }
+      }
+      
+    
+  </script>
+</body>
+</html>

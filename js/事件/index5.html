@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+ <h1 >hello</h1>
+  <script>
+    var h1 = document.querySelector("h1");
+      h1.style.color="#fff";
+      h1.style.background= "#000";
+      h1.innerHTML="今天天气晴朗！";
+    </script>  
+-->
+
+
+<button id="pic">按钮</button>
+<img id="btn" src="4.jpg" alt="" width="1000px" >
+<script>
+    var btn = document.querySelector("#btn");
+   btn.onclick = function(){
+       if(btn.src.match("4")){
+            btn.src ="5.jpg";
+        }else{
+            btn.src ="4.jpg";
+        }
+       
+    }
+   
+   //绑定事件   俩个一起不会被覆盖
+   
+//   btn.addEventListener("click",function(){
+//       console.log("hello1");
+//   })
+//    btn.addEventListener("click",function(){
+//        console.log("hello2");
+//    })
+</script>
+
+
+<!--
+
+    <ul id="nav">
+        <li><a href="">首页</a></li>
+      
+    </ul>
+-->
+<!--
+
+<script>
+var  date = ["新闻","关于","联系"];
+    
+    var json = [
+        {"text":"关于","src":"about.html"},
+         {"text":"联系","src":"help.html"},
+         {"text":"新闻","src":"news.html"}
+    ];
+    console.log(json[0].text)
+      console.log(json[0].src)
+for (var i = 0;i < date.length; i++){
+     var nav = document.querySelector("#nav");  //选择
+    var addli = document.createElement("li"); //创建新选择器 createElement
+    nav.appendChild(addli);
+    var adda = document.createElement("a");
+    adda.innerHTML = json[i].text;
+    adda.href = json[i].src;  
+    addli.appendChild(adda);
+   
+}
+   
+//    var nav = document.querySelector("#nav");  //选择
+//    var addli = document.createElement("li"); //创建新选择器 createElement
+//    nav.appendChild(addli);
+//    var adda = document.createElement("a");
+//    adda.innerHTML = "关于";
+//    adda.href = "";  
+//    addli.appendChild(adda);
+//    
+//     var addli = document.createElement("li");
+//    nav.appendChild(addli);
+//    var adda = document.createElement("a");
+//    adda.innerHTML = "联系";
+//    adda.href = "";
+//    addli.appendChild(adda);
+    
+    
+//    事件冒泡:默认状态 从里到外执行，  事件捕获：从外到里执行 事件委托
+    
+    
+</script>
+-->
+<style>
+    .box3{
+        width: 300px;
+        height: 300px;
+        background-color: #aaa;
+    }
+     .box2{
+        width: 500px;
+        height: 500px;
+        background-color: #111;
+    }
+     .box1{
+        width: 700px;
+        height: 700px;
+        background-color: #ff0;
+    }
+    </style>
+<div class="box1">
+    <div class="box2">
+        <div class="box3"></div>
+    </div>
+</div>
+<script>
+    var box1 = document.querySelector(".box1");
+     var box2 = document.querySelector(".box2");
+     var box3 = document.querySelector(".box3");
+ 
+   
+    box1.addEventListener("click",function(){
+        console.log("box1")
+    },true);
+     box2.addEventListener("click",function(){
+        console.log("box2")
+    },true);
+     box3.addEventListener("click",function(){
+        console.log("box3")
+    },true);
+    </script>
+</body>
+</html>

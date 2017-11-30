@@ -1,0 +1,8 @@
+#btn{
+    cursor: pointer;
+    width:100px;
+    height: 50px;
+}
+#btn[disabled]{
+    cursor:no-drop;
+}

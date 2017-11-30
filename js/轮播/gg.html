@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            float: left;
+        }
+        
+        #u {
+            transition: 1s;
+        }
+        
+        #oo {
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div>></div>
+    <div id="jian">
+       
+        <
+    </div>
+            <div id="oo">
+                <div id="u"> <img src="img/1.jpg" alt=""> <img src="img/2.jpg" alt=""> <img src="img/3.jpg" alt=""> <img src="img/4.jpg" alt=""> <img src="img/5.jpg" alt=""> <img src="img/1.jpg" alt=""> </div>
+            </div>
+            <script>
+                window.onload = function () {
+                    var m = document.querySelector("#u")
+                    var oo = document.querySelector("#oo")
+                    var imge = document.querySelectorAll("img")
+                    var y = imge[0].offsetWidth
+                    oo.style.width = y + "px"
+                    m.style.width = y * imge.length + "px"
+                    var qwer = 0
+
+                    function ooe() {
+                        qwer++
+                        m.style.marginLeft = qwer * -y + "px"
+                        if (qwer == 6) {
+                            m.style.transition = '0s'
+                            m.style.marginLeft = 0 + "px"
+                            setTimeout("m.style.transition='1s'", 10)
+                            setTimeout("m.style.marginLeft=-520+'px'", 10)
+                            qwer = 1
+                        }
+                        else {
+                            m.style.marginLeft = qwer * -y + "px"
+                        }
+                        console.log(qwer)
+                    }
+                    var ll = setInterval(ooe, 1000)
+                    var jian = document.querySelector("#jian")
+                    jian.onclick = function () {
+                        qwer--
+                        clearInterval(ll)
+                        ll = setInterval(ooe, 1000)
+                        if (qwer == -1) {
+                            qwer = 5
+                            m.style.transition = '0s'
+                            m.style.marginLeft = -qwer * y + "px"
+                            setTimeout("m.style.transition='1s'", 1)
+                            setTimeout("m.style.marginLeft=-2080+'px'", 1)
+                            qwer = 4
+                            console.log(qwer)
+                        }
+                        else {
+                            m.style.marginLeft = qwer * -y + "px"
+                        }
+                        
+                    }
+                }
+                var m = document.querySelector("#u")
+            </script>
+</body>
+
+</html>

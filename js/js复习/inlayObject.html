@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+<!--   内置对象-->
+<!--   Math-->
+<!--
+       <input type="text" id="text">
+       <button id='btn'>猜数字</button>
+-->
+       
+        <script>
+            
+//            var pi=Math.PI;
+//            
+////            取整数
+////            向上取整
+//            console.log(pi);
+//            var mfloor=Math.floor(pi);//向上取整
+//            console.log(mfloor);
+////            向下取整
+//            var mceil=Math.ceil(pi);//向下取整
+//            console.log(mceil)
+//            
+////            四舍五入
+//            var mround=Math.round(pi);// 四舍五入
+//            console.log(mround)
+            
+            
+//            取0-1之间的随机数
+            
+//            var mrandom=Math.random();//取0-1之间的随机数
+////            取100-1000之间的随机数
+//            mrandom=Math.round(mrandom*900+100)//加100保证不为两位数；
+////            if(mrandom<100){
+////                var mrandom=Math.random();
+////                mrandom=Math.round(mrandom*1000+1)
+////            }
+//            console.log(mrandom)
+            
+//            var text=document.querySelector('#text');
+//            var btn=document.querySelector("#btn");
+//            var num=Math.floor(Math.random()*99+1);
+//            btn.addEventListener("click",function(){
+//                
+//                var value=Number(text.value);
+//                console.log(num)
+//                if(value<num){
+//                    alert("小于结果") 
+//                }else if(value>num){
+//                    alert("大于结果")
+//                }else{
+//                    alert("走狗屎运了，正确！")
+//                }
+//            })
+//        
+        </script>
+
+<!--   Date-->
+   
+<!--
+   <br>
+    &copy;<span id="copy"></span>
+    <script>
+        function time(){
+        var mytaday=new Date();//获取本地日期
+        console.log(mytaday)
+        var year=mytaday.getFullYear();//获取年
+        console.log(year)
+        var month=mytaday.getMonth()+1;//获取月份
+        console.log(month)
+        var date=mytaday.getDate();//获取日；
+        console.log(date)
+        var day=mytaday.getDay();//获取星期
+        console.log(day)
+        var h=mytaday.getHours();//获取小时
+        console.log(h);
+        var m=mytaday.getMinutes();//获取分钟
+        console.log(m);
+        var s=mytaday.getSeconds();//获取秒数
+        console.log(s);
+        m=cishu(m);
+        s=cishu(s);
+        document.querySelector("#copy").innerHTML=year+"/"+ month+"/"+ date+"  "+h+":"+m+":"+s
+        }
+//        setInterval(time,500)
+        function cishu(i){
+            if(i<10){
+                i="0"+i
+            }
+            return i
+        }
+
+        
+        
+//        var newDate=new Date("2017-9-19 20:00:00");//创建指定日期
+//        var hh=newDate.getHours();
+//        console.log(hh)
+//        var gg=newDate.getTime();// 时间戳(从1970到目前的毫秒数)
+//        console.log(gg)
+    </script>
+-->
+    
+    <h2>2017-09-19 <span id="span"></span></h2>
+    <h3>2017年9月20日8点10分00秒可以点击按钮</h3>
+    <h4 id='h4'></h4>
+    <button disabled id='btn'>按钮</button>
+    <script>
+        var btn=document.querySelector("#btn");
+        function timeday(){
+            var mytaday=new Date();
+            var h=mytaday.getHours();
+            var m=mytaday.getMinutes();
+            var s=mytaday.getSeconds();
+            m=cishu(m);
+            s=cishu(s);
+            document.querySelector("#span").innerHTML=h+":"+m+":"+s;
+            
+            
+            
+            
+            if(h==8&&m==10&&s==00){
+                clearInterval(t)
+                btn.disabled="";
+                btn.style.backgroundColor="red";
+                
+            }
+        }
+        function cishu(i){
+            if(i<10){
+                i="0"+i
+            }
+            return i
+        }
+        var t=setInterval(timeday,1000)
+    </script>
+</body>
+</html>

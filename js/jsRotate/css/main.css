@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/*! 盛邦升华 */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  background-color: #000; }
+
+#nav {
+  width: 130px;
+  height: 400px;
+  position: absolute;
+  list-style: none;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto; }
+  #nav li {
+    position: absolute;
+    transition: 1s;
+    transform-origin: 25px 375px; }

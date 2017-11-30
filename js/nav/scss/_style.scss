@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 700px;
+  margin: auto;
+}
+
+nav {
+  ul {
+    list-style: none;
+      position: relative;
+  }
+  ul::after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+  li {
+    float: left;
+  }
+  a {
+    padding: 20px 40px;
+    display: block;
+    background-color: #eee;
+    color: #000;
+    text-decoration: none;
+  }
+    #s{
+        background-color: #0df;
+        height: 3px;
+        width: 112px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        transition: 0.5s;
+    }
+}

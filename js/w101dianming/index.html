@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>学生点名系统</title>
+    <meta name="description" content="W101例子 - 2017年9月27日">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<div class="container">
+    <h2 class="text-center">W101
+        <small>学生点名系统</small>
+    </h2>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <p>
+                <button class="btn btn-primary btn-lg btn-block" id="s">点名</button>
+            </p>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <p>
+                <button class="btn btn-danger btn-lg btn-block" id="r" disabled>重置</button>
+            </p>
+        </div>
+    </div>
+
+    <h1 class="alert alert-warning" id="tips" role="alert">请点击点名按钮，开始点名。</h1>
+
+    <hr>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>姓名</th>
+            <th>点名状态</th>
+            <th>设置已点</th>
+        </tr>
+        </thead>
+        <tbody id="app">
+
+        </tbody>
+    </table>
+
+    <hr>
+
+    <p>&copy; 盛邦升华 <a href="http://sbsh.me" target="_blank">sbsh.me</a></p>
+</div>
+<!-- JavaScript -->
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
