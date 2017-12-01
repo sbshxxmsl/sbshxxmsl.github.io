@@ -1,0 +1,81 @@
+.banner-height{
+    height: 140px;
+    position: relative;
+    top:71px;
+}
+.fugai-height{
+    height: 140px;
+}
+.element-div{
+    width: 100%;
+    height: 140px;
+    position: relative;
+    top:-140px;
+}
+.zong .zhangti .insidepage-a{
+    color:#81c141;
+}
+.fugai-ziti{
+    width: 1156px;
+    height: 140px;
+    line-height: 140px;
+    display: block;
+    font-size: 26px;
+    color:#fff;
+    position: relative;
+}
+.main-margin{
+    margin-top: 71px;
+    height: 1344px;
+}
+.inside-main-top{
+    width: 1156px;
+    padding-top: 66px;
+}
+.inside-main-top-left-span{
+    display: block;
+    color:#cccccc;
+    margin-bottom: 14px;
+}
+.inside-main-top-left-p{
+    line-height: 0px;
+}
+.inside-main-top-left-p a{
+    height: 32px;
+    line-height: 32px;
+    color:#81c141;
+}
+.inside-main-top-left-p a:hover{
+    color:#5b892d;
+    text-decoration: none;
+}
+.inside-main-margin-top{
+    margin-top:27px;
+}
+.inside-main-top-left-p-yanse{
+    color:#6f7477;
+}
+.inside-main-top-margin-left{
+    margin-left:30px;
+}
+.inside-main-top-center-span{
+    font-size: 24px;
+    color:#000;
+    margin-bottom:21px;
+    display: block;
+    height: 24px;
+}
+.inside-main-bottom{
+    width: 1156px;
+    clear: both;
+    position: relative;
+}
+.inside-main-bottom-margin-right{
+    float: right;
+    width: 750px;
+    position: relative;
+}
+.inside-main-bottom-margin-right-img{
+    margin-top:26px;
+    margin-bottom:70px;
+}
