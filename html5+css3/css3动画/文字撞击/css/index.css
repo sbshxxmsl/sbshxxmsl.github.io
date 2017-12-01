@@ -1,0 +1,104 @@
+body,p{
+    margin:0px;
+    padding:0px; 
+}
+.body{
+    overflow: hidden;
+}
+.banner{
+    height: 500px;
+    background: url(../images/bg1.jpg) no-repeat center;
+    background-color:#000;
+    color: #fff;
+    font-family: "微软雅黑";
+}
+.banner .center{
+    text-align: center;
+    padding-top:100px;
+}
+.banner .center .title{
+    margin-bottom: 50px;
+}
+.banner .center .title p{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.banner .center .title .text{
+    position: relative;
+    width:100%;
+    height: 72px;
+    margin:auto;
+/*    animation:box 5s linear;*/
+    margin-bottom: 20px;
+    opacity: 0;
+}
+/*
+.banner .center .title .text:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+*/
+.banner .center .title .text div{
+    width: 200px;
+    height: 72px;
+}
+.banner .center .title .text div:nth-of-type(1){
+    background-image: url(../images/text_left.png);
+}
+.banner .center .title .text div:nth-of-type(2){
+    position: absolute;
+    right:0px;
+    top:0px;
+    background-image: url(../images/text_right.png);
+}
+.banner .center .btn{
+    
+}
+.banner .center .btn a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    margin-right: 20px;
+    background-color: #08b573;
+}
+.banner .center .btn a:nth-of-type(2){
+    animation: box2 5s linear infinite;
+}
+/*
+@keyframes box3 {
+    100%{
+        width:400px;
+    }
+}
+*/
+
+@keyframes box1 {
+    20%{
+        margin: -30px 0 0 -30px;
+    }
+    40%{
+       margin: -30px -30px 0 0;
+    }
+    60%{
+        margin: 0px -30px -30px 0;
+    }
+    80%{
+        margin: 0 0 -30px -30px;
+    }
+    100%{
+         margin: 0 0 0px 0px;
+    }
+}
+
+@keyframes box2 {
+    50%{
+        background-color: red;
+    }
+    100%{
+        background-color: #08b573;
+    }
+}

@@ -1,0 +1,85 @@
+/*!
+ * shengbangshenghua
+*/
+body, ul, h2, p {
+  margin: 0px;
+  padding: 0px; }
+
+#work {
+  overflow: hidden;
+  background-color: #000;
+  color: #fff; }
+  #work header {
+    text-align: center; }
+    #work header .line {
+      width: 50px;
+      height: 10px;
+      margin: 20px auto;
+      background-color: #fff; }
+  #work .wrap {
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateZ(35deg) translateY(-200px) translateX(-100px); }
+    #work .wrap ul {
+      width: 1080px;
+      list-style: none;
+      margin: auto; }
+      #work .wrap ul li {
+        transform-style: preserve-3d;
+        margin: 15px;
+        float: left;
+        position: relative;
+        width: 330px;
+        height: 230px; }
+        #work .wrap ul li:hover img {
+          transform: translateZ(100px); }
+        #work .wrap ul li:hover div:nth-of-type(1) {
+          background-color: #ac5cf5;
+          z-index: 3;
+          transform: translateZ(75px); }
+        #work .wrap ul li:hover div:nth-of-type(2) {
+          z-index: 2;
+          background-color: #acd;
+          transform: translateZ(50px); }
+        #work .wrap ul li:hover div:nth-of-type(3) {
+          z-index: 1;
+          background-color: #cbbaad;
+          transform: translateZ(25px); }
+        #work .wrap ul li a {
+          width: 330px;
+          height: 230px;
+          display: block;
+          position: absolute;
+          background-color: #fff; }
+          #work .wrap ul li a img {
+            position: absolute;
+            z-index: 4;
+            transition: 0.5s; }
+        #work .wrap ul li div {
+          width: 330px;
+          height: 230px;
+          position: absolute;
+          opacity: .5;
+          transition: 0.5s; }
+    #work .wrap ul:after {
+      display: table;
+      content: "";
+      clear: both; }
+.woc{
+    background-color: #000;
+    height: 800px;
+    
+}
+.woc .woc2{
+    width:800px;
+    height: 800px;
+    margin: auto;
+}
+.woc img{
+        
+        animation: woc1 3s infinite linear;
+    }
+@keyframes woc1{
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
