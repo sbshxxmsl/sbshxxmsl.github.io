@@ -1,0 +1,285 @@
+*{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .swiper-container{
+            width: 100%;
+            height: 100vh;
+        }
+        .slider1{
+            background: url("../images/92e03b4e140ec12a56f5fa761f53582f.jpg")  no-repeat;
+            background-size: contain;
+        }
+        .swiper2 span{
+            width: 16px;
+            height: 16px;
+            border: 1px solid #fff;
+            background-color: #fff;
+        }
+        .capital{
+            width: 100%;
+            height: 75vh;
+            position: relative;
+        }
+        .dynamic{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center; 
+            align-items: center;            
+
+        }
+        .dynamic .img{
+            
+            width: 100%;
+            opacity: 0;
+            transform-style: preserve-3d;
+            transform:rotateZ(0deg);
+            animation: box 3s ease-out; 
+            display: block;
+        }
+        @keyframes box{
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+        
+        
+        .dynamic1{
+            position: absolute;
+            top: 0px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .dynamic1 img{
+            width: 80%;
+            margin-left: 214px;
+        }
+        .dynamic1 div{
+            width: 100%;
+        }
+        .yaoqing{
+            color: rgb(221, 178, 8);
+            position: absolute;
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            margin-top: -132px;
+            font-size: 38px;
+        }
+        .dynamic2{
+            color:  rgb(221, 178, 8);
+            font-size: 38px;
+            text-align: center;
+        }
+        .dynamic3{
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            margin-left: -60px;
+        }
+        .dynamic3 img{
+            width:120px;
+            opacity:1;
+            transform-style: preserve-3d;
+            animation: box1 1s linear infinite;
+            transform: translateY(0px);
+        }
+        @keyframes box1{
+            100%{
+                transform: translateY(-72px);
+            }
+        }
+        .dynamic4{
+            position: fixed;
+            right: 5%;
+            top:3%;
+            width: 60px;
+            height: 60px;
+            background: url(../images/musicon.png) no-repeat;
+            background-size: contain;
+            transform-style: preserve-3d;
+            transform:rotateZ(0deg); 
+            animation: box2 1s linear infinite;
+            z-index: 100;
+        }
+        @keyframes box2{
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+        
+        .dynamic5{
+            width: 40%;
+            text-align: center;
+            color: rgb(221, 178, 8);
+            font-size: 38px;
+            font-weight: bold;
+            margin-top: 124px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .dynamic5 img{
+            width: 100%;
+            margin-top: -44px;
+        }
+        
+        .dynamic6{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .dynamic6 img{
+            width: 100%;
+        }
+        .dynamic7{
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgb(221, 178, 8);
+            font-size: 30px;
+            margin-top: 60px;
+        }
+        .dynamic7 p{
+            line-height: 1.5;
+        }
+        
+        .dynamic8{
+            color: rgb(221, 178, 8);
+            font-size: 38px;
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            margin-top: 120px;
+        }
+        .row{
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .col-sm-3{
+            width: 30%;
+            padding: 0 10px;
+            float: left;
+        }
+        .col-sm-9{
+            width: 70%;
+            padding: 0 10px;
+            float: left;
+            
+        }
+        .dynamic7 .row .col-sm-3 img{
+            width: 140%;
+            margin-left: -58px;
+            margin-top: -46px;
+            transform-style: preserve-3d;
+            transform:rotateZ(0deg);
+            animation: box3 3s ease-out; 
+            display: block;
+
+        }
+        
+        @keyframes box3{
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+        
+        
+        
+        .dynamic7 .row .col-sm-3 span{
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: -190px;
+            margin-left: -40px;
+            display: block;
+        }
+        .clearfix{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .dynamic9{
+            position: absolute;
+            bottom: 50px;
+            left:44.897959%;
+            right: 44.897959%;
+        }
+        .dynamic9 img{
+            width: 100px;
+        }
+        .dynamic10{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            
+        }
+        .dynamic10 .row .col-sm-3 div{
+            border-radius: 50%;
+            padding:4px;
+            overflow: hidden;
+            border: 1px solid #d9b208;
+        }
+        .dynamic10 img{
+            width: 100%;
+            height: 246.594px;
+            border-radius: 50%;
+        }
+        .dynamic10 .row .col-sm-9 p{
+            color:  rgb(221, 178, 8);
+            font-size: 38px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .dynamic11{
+            width:46%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .dynamic11 img{
+            width: 100%;
+        }
+        .dynamic12{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            color:  rgb(221, 178, 8);
+            font-size: 40px;
+            line-height: 1.2;
+            margin-top: 30px;
+        }
+        .dynamic13{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .dynamic13 img{
+            width: 100%;
+        }
+        .dynamic14{
+            
+        }
+        .dynamic14 input{
+            width: 100%;
+            display: block;
+/*            color: #ddb208;*/
+            font-size: 42px;
+            line-height: 2.2;
+            margin-bottom: 24px;
+            margin-top: 24px;
+            border-radius: 16px;
+            border: 2px solid #ddb208;
+            padding-left: 30px;
+        }
+        .sub{
+            text-align: center;
+            background-color: rgb(221, 178, 8);
+            color: #fff;
+            font-size: 44px;
+        }
